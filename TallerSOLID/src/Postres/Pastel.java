@@ -12,19 +12,11 @@ public class Pastel extends Postre{
         precioParcial = 15.55;
     }
     
-    public double calcularPrecioFinal(){
-        double precioFinal;      
-        precioFinal=(super.getPrecioParcial()+(super.getPrecioParcial()*0.12))+(super.getAderezos().size()*0.50);
-        return precioFinal;
-    }
-
 
     @Override
     public String toString() {
         return "Pastel{" + "sabor=" + super.getSabor() + ", precioParcial=" + super.getPrecioParcial() + ", aderezos=" + super.getAderezos() + '}';
     }
-    public String showPrecioFinal(){
-        return "Precio Final: $ " + calcularPrecioFinal();
-    }
+   
     
 }

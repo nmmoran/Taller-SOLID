@@ -9,6 +9,9 @@ public class Postre {
     private double precioParcial;
     private ArrayList<Aderezo> aderezos;
     
+    public Postre(){
+    
+    }
     public Postre(String sabor, double precioParcial, ArrayList<Aderezo> aderezos) {
     this.sabor = sabor;
     this.precioParcial = precioParcial;
