@@ -13,13 +13,14 @@ import Postres.Postre;
  */
 public class ManejadorDePrecio {
     
-     public double calcularPrecioFinal(){
-        Postre p=new Postre();
+     public static double calcularPrecioFinal(Postre p){
+        //Postre p=new Postre();
         double precioFinal;      
         precioFinal=(p.getPrecioParcial()+(p.getPrecioParcial()*0.12))+(p.getAderezos().size()*0.50);
         return precioFinal;
     }
-     public String showPrecioFinal(){
-        return "Precio Final: $ " + calcularPrecioFinal();
+     public static String showPrecioFinal(Postre p){
+         
+        return "Precio Final: $ " + calcularPrecioFinal(p);
     }
 }

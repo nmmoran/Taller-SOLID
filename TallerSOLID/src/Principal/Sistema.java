@@ -17,31 +17,26 @@ import java.util.ArrayList;
  */
 public class Sistema {
     public static void main(String [ ] args){
-        // Producir un helado de vainilla y una torta de chocolate, 
-        // a ambos agregarles CREMA y FRUTILLAS
-        // y cambiar el tipo de leche por Leche Descremada
-        // Finalmente mostrar el precio final de cada uno
+        
         ArrayList<Postre> arrPostres = new ArrayList<>();
-        LecheEntera leche = new LecheDeslactosada();
-        ManejadorDeLeche mnj_leche = new ManejadorDeLeche();
+        ManejadorDeLeche mnj_leche = new ManejadorDeLeche(new LecheDescremada());
         
         // Producir Helado
         Postre helado_vainilla = new Helado("Vainilla");
         arrPostres.add(helado_vainilla);
-        helado_vainilla.anadirAderezo(new Crema());
-        helado_vainilla.anadirAderezo(new Frutilla());
-        System.out.println(helado_vainilla);
-//        mnj_leche.cambiarTipoLeche(leche, helado_vainilla);
-       // System.out.println(helado_vainilla.showPrecioFinal());
-        
         // Producir Pastel
         Postre pastel_chocolate = new Pastel("Chocolate");
-        pastel_chocolate.anadirAderezo(new Crema());
-        pastel_chocolate.anadirAderezo(new Frutilla());
-        System.out.println(pastel_chocolate);
-//        mnj_leche.cambiarTipoLeche(leche, pastel_chocolate);
-        //System.out.println(helado_vainilla.showPrecioFinal());
+        arrPostres.add(pastel_chocolate);
         
+        arrPostres.forEach(postre -> {
+            postre.anadirAderezo(new Crema());
+            postre.anadirAderezo(new Frutilla());
+            System.out.println(postre);
+            mnj_leche.cambiarTipoLeche(postre);
+            System.out.println(ManejadorDePrecio.showPrecioFinal(postre));
+
+        });
+       
         
     }
 }
