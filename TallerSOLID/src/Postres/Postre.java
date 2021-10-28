@@ -39,5 +39,12 @@ public class Postre {
         this.aderezos = aderezos;
     }
     
-    
+    public void anadirAderezo(Postre postre,Aderezo aderezo){
+        postre.getAderezos().add(aderezo);
+    }
+   
+    public void quitarAderezo(Postre postre,Aderezo aderezo){
+        postre.getAderezos().remove(aderezo);
+    }
+
 }
