@@ -13,8 +13,7 @@ public class Pastel extends Postre{
     }
     
     public double calcularPrecioFinal(){
-        double precioFinal;
-        
+        double precioFinal;      
         precioFinal=(super.getPrecioParcial()+(super.getPrecioParcial()*0.12))+(super.getAderezos().size()*0.50);
         return precioFinal;
     }
