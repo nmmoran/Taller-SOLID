@@ -42,12 +42,12 @@ public class Postre {
         this.aderezos = aderezos;
     }
     
-    public void anadirAderezo(Postre postre,Aderezo aderezo){
-        postre.getAderezos().add(aderezo);
+    public void anadirAderezo(Aderezo aderezo){
+        this.getAderezos().add(aderezo);
     }
    
-    public void quitarAderezo(Postre postre,Aderezo aderezo){
-        postre.getAderezos().remove(aderezo);
+    public void quitarAderezo(Aderezo aderezo){
+        this.getAderezos().remove(aderezo);
     }
 
 }

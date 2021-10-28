@@ -7,9 +7,9 @@ import Adicionales.Aderezo;
 public class Pastel extends Postre{
 
     
-    public Pastel(String sabor, double precioParcial, ArrayList<Aderezo> aderezos){
-    	super(sabor, precioParcial, aderezos);    
-        precioParcial = 15.55;
+    public Pastel(String sabor){
+    	super(sabor, 15.55, new ArrayList<>());    
+        
     }
     
 
